@@ -1,0 +1,11 @@
+@import '../global/variables';
+
+.card-header{
+    border-bottom: 1px solid $lightGray;
+    padding: 19px $size15*2 $size15 $size15*2;
+    h2{
+        font-size: $normal-size;
+        font-weight: $semibold;
+        color:$dark;
+    }
+}
