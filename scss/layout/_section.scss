@@ -1,0 +1,17 @@
+@import "../global/variables";
+#booking {
+  background: linear-gradient(135deg, #8e53e4 0%, #4b22b9 100%);
+
+  height: $vh100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: auto;
+    background-color: red;
+  }
+}
