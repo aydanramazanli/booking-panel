@@ -214,33 +214,45 @@ html {
   width: 100%;
 }
 .card-content ul li {
+  box-sizing: border-box;
+  width: 100%;
   background: #FFFFFF;
   margin-bottom: 10px;
   display: flex;
   padding: 15px 20px;
+  align-items: center;
+  justify-content: space-between;
 }
-.card-content ul li img {
+.card-content ul li div {
+  display: flex;
+}
+.card-content ul li div img {
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
-.card-content ul li div {
+.card-content ul li div div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   margin-left: 22px;
 }
-.card-content ul li div h2 {
+.card-content ul li div div h2 {
   font-size: 15px;
   font-weight: 500;
   color: #292D32;
   margin-bottom: 6px;
 }
-.card-content ul li div p {
+.card-content ul li div div p {
   font-weight: 400;
   font-size: 12px;
   color: #828F9A;
+}
+.card-content ul li h2 {
+  color: #4FBF65;
+  font-weight: 500;
+  font-size: 26px;
 }
 
 footer {
@@ -253,7 +265,7 @@ footer .aside-footer {
   background: #292D32;
   width: 230px;
 }
-footer .main-footer {
+footer .card-footer {
   width: 750px;
   background: #FFFFFF;
   padding: 20px 30px;
@@ -261,11 +273,20 @@ footer .main-footer {
   display: flex;
   justify-content: flex-end;
 }
-footer .main-footer button {
+footer .card-footer .back-btn {
+  color: #828F9A;
   font-size: 12px;
-  color: #FFFFFF;
   font-weight: 600;
-  background-color: #6C70DC;
   padding: 9px 14px;
   border-radius: 2px;
+  cursor: pointer;
+}
+footer .card-footer .next-btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #6C70DC;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

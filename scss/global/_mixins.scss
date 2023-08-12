@@ -1,0 +1,20 @@
+@mixin footer-btn{
+    font-size: $xs;
+    font-weight: $bold;
+    padding: 9px $small;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+@mixin listNumber{
+    margin-right: $xs;
+    width: $xs*2;
+    height: $xs*2;
+    border-radius:50%;
+    display: $flex;
+    align-items: $center;
+    justify-content: $center;
+    font-size: $xs;
+    font-weight: $bold; 
+    color:$white;
+}

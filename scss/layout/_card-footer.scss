@@ -1,29 +1,33 @@
-@import '../global/variables';
+@import "../global/variables";
+@import "../global/mixins";
+@mixin staff {
+}
 
-footer{
-    width: $parcent100;
-    height: 75px;
+footer {
+  width: $parcent100;
+  height: 75px;
+  display: $flex;
+  border-top: 1px solid $lightGray;
+  .aside-footer {
+    background: $dark;
+    width: 230px;
+  }
+  .card-footer {
+    width: 750px;
+    background: $white;
+    padding: 20px 30px;
+    box-sizing: border-box;
     display: $flex;
-    border-top: 1px solid $lightGray;
-    .aside-footer{
-        background:$dark;
-        width: 230px;
-    
+    justify-content: $f-end;
+    .back-btn {
+        color: $textGray;
+        @include footer-btn;
+      }
+    .next-btn {
+      @include footer-btn;
+      background-color: $buttonViolet;
+      color: $white;
     }
-    .main-footer{
-        width: 750px;
-        background:$white;
-        padding: 20px 30px;
-        box-sizing: border-box;
-        display: $flex;
-        justify-content: $f-end;
-        button{
-            font-size: $xs;
-            color:$white;
-            font-weight: $bold;
-            background-color:$buttonViolet;
-            padding: 9px $small;
-            border-radius: 2px;
-        }
-    }
+   
+  }
 }
