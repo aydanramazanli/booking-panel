@@ -1,20 +1,40 @@
-@mixin footer-btn{
-    font-size: $xs;
-    font-weight: $bold;
-    padding: 9px $small;
-    border-radius: 2px;
-    cursor: pointer;
+@mixin footer-btn {
+  font-size: $xs;
+  font-weight: $bold;
+  padding: 9px $small;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-@mixin listNumber{
-    margin-right: $xs;
-    width: $xs*2;
-    height: $xs*2;
-    border-radius:50%;
-    display: $flex;
-    align-items: $center;
-    justify-content: $center;
-    font-size: $xs;
-    font-weight: $bold; 
-    color:$white;
+@mixin listNumber {
+  margin-right: $xs;
+  width: $xs * 2;
+  height: $xs * 2;
+  border-radius: 50%;
+  display: $flex;
+  align-items: $center;
+  justify-content: $center;
+  font-size: $xs;
+  font-weight: $bold;
+  color: $white;
+}
+
+.card-staff{
+    box-sizing: border-box;
+  width: $parcent100;
+  background: $white;
+  margin-bottom: $smaller;
+  display: $flex;
+  padding: $size15 $smaller * 2;
+  align-items: $center;
+}
+.card-service {
+  box-sizing: border-box;
+  width: $parcent100;
+  background: $white;
+  margin-bottom: $smaller;
+  display: $flex;
+  padding: $size15 $smaller * 2;
+  align-items: $center;
+  justify-content: space-between;
 }

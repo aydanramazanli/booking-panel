@@ -1,51 +1,45 @@
 @import "../global/variables";
+@import "../global/mixins";
 
 .card-content {
   padding: 25px $size15 * 2;
-ul{
-  width: $parcent100;
-  li {
-    box-sizing: border-box;
+  ul {
     width: $parcent100;
-    background: $white;
-    margin-bottom: $smaller;
-    display: $flex;
-    padding: $size15 $smaller * 2;
-    align-items: center;
-    justify-content: space-between;
-div{
-  display: $flex;
-  img {
-    border-radius: $parcent100/2;
-    width: $half;
-    height: $half;
-  }
-  div {
-    display: $flex;
-    flex-direction: $col;
-    align-items: flex-start;
-    justify-content: $center;
-    margin-left: 22px;
-    h2 {
-      font-size: $size15;
-      font-weight: $semibold;
-      color:$dark;
-      margin-bottom: 6px;
+    .staff {
+      box-sizing: border-box;
+      width: $parcent100;
+      background: $white;
+      margin-bottom: $smaller;
+      display: $flex;
+      padding: $size15 $smaller * 2;
+      align-items: $center;
+
+  
+        img {
+          border-radius: $parcent100/2;
+          width: $half;
+          height: $half;
+        }
+
+        div {
+          display: $flex;
+          flex-direction: $col;
+          align-items: flex-start;
+          justify-content: $center;
+          margin-left: 22px;
+          h2 {
+            font-size: $size15;
+            font-weight: $semibold;
+            color: $dark;
+            margin-bottom: 6px;
+          }
+          p {
+            font-weight: $normal;
+            font-size: $xs;
+            color: $textGray;
+          }
+        
+      }
     }
-    p {
-      font-weight: $normal;
-      font-size: $xs;
-      color:$textGray;
-    }
   }
-}
-h2{
-  color:$textGreen;
-  font-weight: $semibold;
-  font-size: 26px;
-}
-   
-  }
-}
- 
 }

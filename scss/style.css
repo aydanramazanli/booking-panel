@@ -143,6 +143,27 @@ select {
   outline: none;
 }
 
+.card-staff {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.card-service {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
 html {
   font-family: "Poppins", sans-serif;
 }
@@ -207,13 +228,17 @@ html {
   color: #292D32;
 }
 
-.card-content {
-  padding: 25px 30px;
-}
-.card-content ul {
+.card-staff {
+  box-sizing: border-box;
   width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
 }
-.card-content ul li {
+
+.card-service {
   box-sizing: border-box;
   width: 100%;
   background: #FFFFFF;
@@ -223,36 +248,218 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-.card-content ul li div {
-  display: flex;
+
+.card-content {
+  padding: 25px 30px;
 }
-.card-content ul li div img {
+.card-content ul {
+  width: 100%;
+}
+.card-content ul .staff {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+}
+.card-content ul .staff img {
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
-.card-content ul li div div {
+.card-content ul .staff div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   margin-left: 22px;
 }
-.card-content ul li div div h2 {
+.card-content ul .staff div h2 {
   font-size: 15px;
   font-weight: 500;
   color: #292D32;
   margin-bottom: 6px;
 }
-.card-content ul li div div p {
+.card-content ul .staff div p {
   font-weight: 400;
   font-size: 12px;
   color: #828F9A;
 }
-.card-content ul li h2 {
+
+.card-content {
+  padding: 25px 30px;
+}
+.card-content ul {
+  width: 100%;
+}
+.card-content ul .service {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-content ul .service div {
+  display: flex;
+}
+.card-content ul .service div img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.card-content ul .service div div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 22px;
+}
+.card-content ul .service div div h2 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #292D32;
+  margin-bottom: 6px;
+}
+.card-content ul .service div div p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #828F9A;
+}
+.card-content ul .service h3 {
   color: #4FBF65;
   font-weight: 500;
   font-size: 26px;
+}
+
+.time-card {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.time-card .wrapper {
+  width: 370px;
+}
+.time-card .container-calendar {
+  background: #ffffff;
+  padding: 15px;
+  max-width: 475px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.time-card .button-container-calendar {
+  margin-bottom: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.time-card .button-container-calendar button {
+  cursor: pointer;
+  background-color: transparent;
+  display: inline-block;
+  zoom: 1;
+  color: 1px solid black;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.time-card .table-calendar {
+  border-collapse: collapse;
+  width: 100%;
+}
+.time-card .table-calendar td {
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+}
+.time-card .table-calendar th {
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+}
+.time-card .date-picker.selected {
+  font-weight: bold;
+  outline: 1px dashed #00bcd4;
+}
+.time-card .date-picker.selected span {
+  border-bottom: 2px solid currentColor;
+}
+.time-card .date-picker:nth-child(1) {
+  color: red;
+}
+.time-card .date-picker:nth-child(6) {
+  color: green;
+}
+.time-card #monthAndYear {
+  text-align: center;
+  margin-top: 0;
+}
+.time-card #previous {
+  float: left;
+}
+.time-card #next {
+  float: right;
+}
+.time-card .time {
+  width: 305px;
+  margin: 8px 15px;
+}
+.time-card .time h2 {
+  margin-bottom: 19px;
+  text-align: center;
+}
+.time-card .time-content {
+  background: #FFFFFF;
+}
+.time-card .time-content h2 {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6C70DC;
+  border-bottom: 1px solid #E3EAF3;
+}
+.time-card .time-content .wrapper {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+.time-card .time-content .wrapper .times {
+  padding: 10px 21px;
+  background: #ECEFF2;
+}
+.time-card .time-content .wrapper .times h3 {
+  color: #111111;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+.card-staff {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.card-service {
+  box-sizing: border-box;
+  width: 100%;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 footer {
@@ -289,4 +496,73 @@ footer .card-footer .next-btn {
   cursor: pointer;
   background-color: #6C70DC;
   color: #FFFFFF;
+}
+
+form {
+  padding: 30px 25px;
+}
+form .row {
+  display: flex;
+  justify-content: space-between;
+}
+form .row .col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+form .row .col .label {
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #292D32;
+}
+form .row .col .label span {
+  color: #ef264d;
+}
+form .row .col input {
+  width: 335px;
+  height: 46px;
+  outline: none;
+  border: 1px solid #e3eaf3;
+  border-radius: 3px;
+}
+form .note {
+  display: flex;
+  flex-direction: column;
+}
+form .note .label {
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #292D32;
+}
+form .note .note-content {
+  padding: 19px 26px 13px 26px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #e3eaf3;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+form .note .note-content div {
+  display: flex;
+  margin: 4px 0;
+}
+form .note .note-content div h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6C70DC;
+}
+form .note .note-content div .data-content {
+  margin-left: 12px;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 300;
+}
+form .note .note-content div .greenText {
+  color: #4FBF65;
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

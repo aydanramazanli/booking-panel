@@ -1,0 +1,76 @@
+@import "../global/variables";
+
+form {
+  padding: 30px 25px;
+  .row {
+    display: $flex;
+    justify-content: space-between;
+
+    .col {
+      display: $flex;
+      flex-direction: $col;
+      margin-bottom: 25px;
+
+      .label {
+        margin-bottom: 9px;
+        font-size: $small;
+        font-weight: $normal;
+        color: $dark;
+        span {
+          color: #ef264d;
+        }
+      }
+
+      input {
+        width: 335px;
+        height: 46px;
+        outline: none;
+        border: 1px solid #e3eaf3;
+        border-radius: 3px;
+      }
+    }
+  }
+  .note {
+    display: $flex;
+    flex-direction: $col;
+    .label {
+      margin-bottom: 9px;
+      font-size: $small;
+      font-weight: $normal;
+      color: $dark;
+    }
+    .note-content {
+      padding: 19px 26px 13px 26px;
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid #e3eaf3;
+      background: $white;
+      display: $flex;
+      flex-direction: $col;
+      div{
+        display: $flex;
+        margin:4px 0;
+        h2{
+          font-weight: $normal;
+          font-size: $small;
+          color:$violet;
+
+        }
+        .data-content{
+          margin-left: 12px;
+          color:$darkText;
+          font-size: $small;
+          font-weight: $thin;
+        }
+        .greenText{
+          color:$textGreen;
+          margin-left: 12px;
+          font-size: $small;
+          font-weight: $thin;
+        }
+       
+      
+      }
+    }
+  }
+}
