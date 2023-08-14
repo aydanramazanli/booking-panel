@@ -1,17 +1,5 @@
 
-  
-  // const date = ["2022-03-04", "2022-03-05", "2022-03-06"];
-  // const time = [
-  //   {
-  //     start_time: "09:00",
-  //     end_time: "09:30",
-  //   },
-  //   {
-  //     start_time: "09:30",
-  //     end_time: "10:00",
-  //   },
-  // ];
-  
+
   const services = [
     {
       id: 1,
@@ -58,6 +46,10 @@
   
     // added details
     services.appendChild(serviceList);
+
+    const nextBtn = document.getElementById('step2')
+    const modal = document.querySelector(".modal");
+ 
   
     const selectList = document.querySelectorAll(".service");
     selectList.forEach((selected) => {
@@ -66,7 +58,18 @@
           option.style.border = 0;
         });
         selected.style.border = "1px solid #53D56C";
+        window.location.pathname="../date.html"
       });
+    });
+
+    const isAnySelected = Array.from(selectList).some(
+      (option) => option.style.border === "2px solid green");
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault()
+      if (!isAnySelected) {
+        modal.style.display = "flex";
+      }
+     
     });
 
     serviceList.addEventListener("click", function() {

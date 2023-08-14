@@ -74,3 +74,30 @@ form {
     }
   }
 }
+#modal{
+  width: 500px;
+  height: 160px;
+  background: white;
+  position: absolute;
+  top:50%;
+  left: 2%;
+  border-radius: 3px;
+  padding:21px 23px;
+  display: none;
+  .modalContent{
+    height: 100%;
+    i{
+      display: $flex;
+      justify-content: flex-end;
+      
+    }
+    .modalnot{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3{
+      font-weight: 500;
+      font-size: 18px;
+    }}
+  }
+}

@@ -14,17 +14,6 @@ const staff = [
   },
 ];
 
-// const date = ["2022-03-04", "2022-03-05", "2022-03-06"];
-// const time = [
-//   {
-//     start_time: "09:00",
-//     end_time: "09:30",
-//   },
-//   {
-//     start_time: "09:30",
-//     end_time: "10:00",
-//   },
-// ];
 
 staff.forEach((staffItem) => {
   const staffs = document.getElementById("stafflist");
@@ -63,21 +52,28 @@ staff.forEach((staffItem) => {
       });
       selected.style.border = "2px solid green";
       modal.style.display = "none";
+      window.location.pathname="../service.html"
+    
     });
   });
 
   const isAnySelected = Array.from(selectList).some(
-    (option) => option.style.border === "2px solid green"
-  );
-  nextBtn.addEventListener("click", () => {
+    (option) => option.style.border === "2px solid green");
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault()
     if (!isAnySelected) {
       modal.style.display = "flex";
     }
+   
   });
 
+
+
+
+  
   // added localstorage
   staffList.addEventListener("click", function () {
-    localStorage.setItem(" staff_id", staffItem.id);
+    localStorage.setItem("staff_id", staffItem.id);
     localStorage.setItem("staff", staffItem.name);
   });
 

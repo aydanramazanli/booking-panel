@@ -136,12 +136,7 @@ function daysInMonth(iMonth, iYear) {
 //selected days
 const myDays = document.getElementsByTagName("tr");
 const modal = document.querySelector(".times");
-const modalContent = document.querySelector(".content")
-
-
-
-
-
+const modalContent = document.querySelector(".content");
 
 const maxSelectedDays = 1;
 let selectedDays = [];
@@ -150,20 +145,19 @@ for (let i = 0; i < myDays.length; i++) {
   const days = myDays[i].getElementsByTagName("td");
   for (let j = 0; j < days.length; j++) {
     days[j].addEventListener("click", () => {
-        const clickedDay = parseInt(days[j].getAttribute("data-date"), 10);
-        const clickedMonth = parseInt(days[j].getAttribute("data-month"), 10);
-        const clickedYear = parseInt(days[j].getAttribute("data-year"), 10);
-        const selectedDate = new Date(clickedYear, clickedMonth - 1, clickedDay);
-        
-        // Tarihi "YYYY-MM-DD" formatına dönüştür
-        const formattedDate = selectedDate.toISOString().split('T')[0];
-        
-        // Tarihi milisaniye cinsinden elde et
-        const dataTimes = selectedDate.getTime();
-        
-        // localStorage'a tarihi yazdır
-        localStorage.setItem("selectedDate", formattedDate);
-        
+      const clickedDay = parseInt(days[j].getAttribute("data-date"), 10);
+      const clickedMonth = parseInt(days[j].getAttribute("data-month"), 10);
+      const clickedYear = parseInt(days[j].getAttribute("data-year"), 10);
+      const selectedDate = new Date(clickedYear, clickedMonth - 1, clickedDay);
+
+      // Tarihi "YYYY-MM-DD" formatına dönüştür
+      const formattedDate = selectedDate.toISOString().split("T")[0];
+
+      // Tarihi milisaniye cinsinden elde et
+      const dataTimes = selectedDate.getTime();
+
+      // localStorage'a tarihi yazdır
+      localStorage.setItem("selectedDate", formattedDate);
 
       if (selectedDays.includes(j)) {
         const index = selectedDays.indexOf(j);
@@ -173,14 +167,13 @@ for (let i = 0; i < myDays.length; i++) {
 
         days[j].addEventListener("click", () => {
           modal.style.display = "block";
-          modalContent.innerHTML="01:00 -02:00"
+          modalContent.innerHTML = "01:00 -02:00";
           modalContent.addEventListener("click", () => {
-            modal.style.backgroundColor="#53D56C"
-            modalContent.style.color="white"
-            localStorage.setItem("time", modalContent.innerHTML)
-         
-          })
-         
+            modal.style.backgroundColor = "#53D56C";
+            modalContent.style.color = "white";
+            window.location.pathname="../confirm.html"
+            localStorage.setItem("time", modalContent.innerHTML);
+          });
         });
 
         days[j].style.backgroundColor = "";
@@ -190,6 +183,8 @@ for (let i = 0; i < myDays.length; i++) {
         days[j].style.backgroundColor = "#6c70dc";
         days[j].style.color = "white";
       }
+
+      nextBtn.addEventListener("click", () => {});
 
       for (let k = 0; k < days.length; k++) {
         if (!selectedDays.includes(k)) {
@@ -204,3 +199,11 @@ for (let i = 0; i < myDays.length; i++) {
     });
   }
 }
+var modalSelect = document.querySelector(".modal");
+var nextBtn = document.getElementById("step3");
+
+if (localStorage.time ===  undefined) {
+  nextBtn.addEventListener("click", () => {
+    modalSelect.style.display = "flex";
+  });
+} 
