@@ -26,23 +26,6 @@ const staff = [
 //   },
 // ];
 
-// const services = [
-//   {
-//     id: 1,
-//     name: "Oral hygiene",
-//     image: "../images/service3.png",
-//     duration: "1 hour",
-//     price: 50.0,
-//   },
-//   {
-//     id: 2,
-//     name: "Implants",
-//     image: "../images/service3.png",
-//     duration: "1 hour 30 minutes",
-//     price: 120.0,
-//   },
-// ];
-
 staff.forEach((staffItem) => {
   const staffs = document.getElementById("stafflist");
   // create staffList
@@ -69,9 +52,18 @@ staff.forEach((staffItem) => {
   // added details
   staffs.appendChild(staffList);
 
+  const selectList = document.querySelectorAll(".staff");
+  selectList.forEach((selected) => {
+    selected.addEventListener("click", () => {
+      selectList.forEach((option) => {
+        option.style.border = 0;
+      });
+      selected.style.border = "1px solid #53D56C";
+    });
+  });
 
-  staffList.addEventListener("click", function() {
-    console.log(staffName.textContent);
+  staffList.addEventListener("click", function () {
     localStorage.setItem(" staff_id", staffItem.id);
-});
+    localStorage.setItem("staff", staffItem.name);
+  });
 });

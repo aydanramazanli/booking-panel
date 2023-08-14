@@ -51,22 +51,22 @@
           <form action="">
             <div class="row">
 <div class="col">
-  <label for="" class="label">First name <span>*</span></label>
-  <input type="text">
+  <label for="name" class="label">First name <span>*</span></label>
+  <input type="text" id="name">
 </div>
 <div class="col">
-  <label for="" class="label">Last name <span>*</span></label>
-  <input type="text">
+  <label for="lastname" class="label">Last name <span>*</span></label>
+  <input type="text" id="lastName">
 </div>
             </div>
             <div class="row">
               <div class="col">
-                <label for="" class="label">E-mail  <span>*</span></label>
-                <input type="text">
+                <label for="email" class="label">E-mail  <span>*</span></label>
+                <input type="text" id="email">
               </div>
               <div class="col">
-                <label for="" class="label">Phone </label>
-                <input type="text">
+                <label for="phone" class="label">Phone </label>
+                <input type="text" id="number">
               </div>
                           </div>
            
@@ -76,21 +76,21 @@
               Note
             </label>
             <div class="note-content">
-              <div >
+              <div class="staff">
                 <h2>Staff:</h2>
-                <p class="data-content">sdfds</p>
+                <p class="data-content" id="staff-data"></p>
               </div>
-              <div>
+              <div class="service">
                 <h2>Service:</h2>
-                <p class="data-content">dsds</p>
+                <p class="data-content" id="service-data"></p>
               </div>
-              <div>
+              <div class="time">
                 <h2>Date:</h2>
-                <p class="data-content">sds</p>
+                <p class="data-content" id="time-data"></p>
               </div>
-              <div>
+              <div class="price">
                 <h2>Price:</h2>
-                <p class="greenText">dsd</p>
+                <p class="greenText" id="price-data"></p>
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@
 <div class="aside-footer"></div>
 <div class="card-footer" style="justify-content:space-between"> 
   <button class="back-btn">Back</button>
-    <button class="next-btn">Confirm Booking</button>
+    <button class="next-btn" id="confirmBtn">Confirm Booking</button>
 </div>
       </footer>
       
@@ -111,5 +111,6 @@
       </div>
      
     </section>
+    <script src="./js/confirmation.js"></script>
   </body>
 </html>

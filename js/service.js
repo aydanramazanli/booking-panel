@@ -35,34 +35,45 @@
     const serviceList = document.createElement("li");
     serviceList.classList.add("service");
   
-    //  create staffImages
+    //  create serviceImages
     const detail = document.createElement("div");
     const imgElement = document.createElement("img");
     imgElement.src = servicesItem.image;
     detail.appendChild(imgElement);
     serviceList.appendChild(detail);
-    // create staffDetail
+    // create serviceDetail
     const serviceDetail = document.createElement("div");
     const serviceName = document.createElement("h2");
     const serviceTime = document.createElement("p");
     const servicePrice= document.createElement("h3");
     serviceName.textContent = servicesItem.name;
     serviceTime.textContent = servicesItem.duration;
-    servicePrice.textContent=servicesItem.price
+    servicePrice.textContent= "$"+servicesItem.price
     serviceDetail.appendChild(serviceName);
     serviceDetail.appendChild(serviceTime);
     serviceDetail.classList.add("detail");
     serviceList.appendChild(serviceDetail);
-    serviceList.appendChild( servicePrice);
+    serviceList.appendChild( servicePrice );
     detail.appendChild(serviceDetail);
   
     // added details
     services.appendChild(serviceList);
   
-  
+    const selectList = document.querySelectorAll(".service");
+    selectList.forEach((selected) => {
+      selected.addEventListener("click", () => {
+        selectList.forEach((option) => {
+          option.style.border = 0;
+        });
+        selected.style.border = "1px solid #53D56C";
+      });
+    });
+
     serviceList.addEventListener("click", function() {
       console.log(serviceName.textContent);
       localStorage.setItem("service_id", servicesItem.id);
+      localStorage.setItem("service", servicesItem.name);
+      localStorage.setItem("servicePrice", servicesItem.price);
   });
   });
   

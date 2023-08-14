@@ -345,11 +345,12 @@ html {
   width: 370px;
 }
 .time-card .container-calendar {
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 15px;
   max-width: 475px;
   margin: 0 auto;
   overflow: auto;
+  height: 280px;
 }
 .time-card .button-container-calendar {
   margin-bottom: 19px;
@@ -358,44 +359,43 @@ html {
   justify-content: center;
 }
 .time-card .button-container-calendar button {
+  font-size: 24px;
   cursor: pointer;
   background-color: transparent;
-  display: inline-block;
-  zoom: 1;
-  color: 1px solid black;
-  border-radius: 4px;
-  padding: 5px 10px;
+  color: 4px solid black;
 }
 .time-card .table-calendar {
-  border-collapse: collapse;
   width: 100%;
 }
+.time-card .table-calendar #thead-month {
+  border-bottom: 1px solid #E3EAF3;
+}
 .time-card .table-calendar td {
-  padding: 5px;
+  padding: 8px;
   text-align: center;
-  vertical-align: top;
+  color: #aaacaf;
+  background-color: rgba(200, 201, 204, 0.301);
+  border: 9px solid white;
 }
 .time-card .table-calendar th {
   padding: 5px;
+  color: #c8c9cc;
   text-align: center;
-  vertical-align: top;
+  font-size: 13px;
+  font-weight: 400;
 }
 .time-card .date-picker.selected {
-  font-weight: bold;
-  outline: 1px dashed #00bcd4;
+  background-color: #6c70dc;
 }
 .time-card .date-picker.selected span {
-  border-bottom: 2px solid currentColor;
+  color: white;
 }
-.time-card .date-picker:nth-child(1) {
-  color: red;
-}
-.time-card .date-picker:nth-child(6) {
-  color: green;
+.time-card .date-picker:nth-child(2) {
+  color: black;
 }
 .time-card #monthAndYear {
   text-align: center;
-  margin-top: 0;
+  margin: 0 10px;
 }
 .time-card #previous {
   float: left;
@@ -405,7 +405,7 @@ html {
 }
 .time-card .time {
   width: 305px;
-  margin: 8px 15px;
+  margin: 1px 15px;
 }
 .time-card .time h2 {
   margin-bottom: 19px;
@@ -413,6 +413,8 @@ html {
 }
 .time-card .time-content {
   background: #FFFFFF;
+  height: 310px;
+  margin-top: 32px;
 }
 .time-card .time-content h2 {
   padding: 15px;
@@ -432,7 +434,7 @@ html {
 }
 .time-card .time-content .wrapper .times {
   padding: 10px 21px;
-  background: #ECEFF2;
+  background: #eceff2;
 }
 .time-card .time-content .wrapper .times h3 {
   color: #111111;
