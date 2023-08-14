@@ -49,10 +49,12 @@
     }
   }
   .date-picker.selected {
+    cursor: pointer;
    
-    background-color: #6c70dc;
+    //background-color: #6c70dc;
     span{
-      color:white;
+
+      cursor: pointer;
     }
   }
   .date-picker {
@@ -101,6 +103,7 @@
       .times {
         padding: 10px 21px;
         background: #eceff2;
+        display: none;
         h3 {
           color: $darkText;
           font-size: $small;

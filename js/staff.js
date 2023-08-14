@@ -51,19 +51,35 @@ staff.forEach((staffItem) => {
 
   // added details
   staffs.appendChild(staffList);
-
+  // select staff
   const selectList = document.querySelectorAll(".staff");
+  const modal = document.querySelector(".modal");
+  const nextBtn = document.getElementById("step1");
+
   selectList.forEach((selected) => {
     selected.addEventListener("click", () => {
       selectList.forEach((option) => {
-        option.style.border = 0;
+        option.style.border = "none";
       });
-      selected.style.border = "1px solid #53D56C";
+      selected.style.border = "2px solid green";
+      modal.style.display = "none";
     });
   });
 
+  const isAnySelected = Array.from(selectList).some(
+    (option) => option.style.border === "2px solid green"
+  );
+  nextBtn.addEventListener("click", () => {
+    if (!isAnySelected) {
+      modal.style.display = "flex";
+    }
+  });
+
+  // added localstorage
   staffList.addEventListener("click", function () {
     localStorage.setItem(" staff_id", staffItem.id);
     localStorage.setItem("staff", staffItem.name);
   });
+
+  // condition
 });

@@ -385,10 +385,10 @@ html {
   font-weight: 400;
 }
 .time-card .date-picker.selected {
-  background-color: #6c70dc;
+  cursor: pointer;
 }
 .time-card .date-picker.selected span {
-  color: white;
+  cursor: pointer;
 }
 .time-card .date-picker:nth-child(2) {
   color: black;
@@ -435,6 +435,7 @@ html {
 .time-card .time-content .wrapper .times {
   padding: 10px 21px;
   background: #eceff2;
+  display: none;
 }
 .time-card .time-content .wrapper .times h3 {
   color: #111111;
@@ -480,7 +481,24 @@ footer .card-footer {
   padding: 20px 30px;
   box-sizing: border-box;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+footer .card-footer .modal {
+  background: #F4BE6C;
+  padding: 9px 14px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+footer .card-footer .modal i {
+  color: white;
+  margin-right: 10px;
+}
+footer .card-footer .modal h3 {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
 }
 footer .card-footer .back-btn {
   color: #828F9A;
