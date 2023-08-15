@@ -37,8 +37,11 @@ footer {
       }
     }
     .back-btn {
-        color: $textGray;
+      
         @include footer-btn;
+        a{
+          color: $textGray;
+        }
       }
     .next-btn {
       @include footer-btn;

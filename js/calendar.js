@@ -148,16 +148,23 @@ for (let i = 0; i < myDays.length; i++) {
       const clickedDay = parseInt(days[j].getAttribute("data-date"), 10);
       const clickedMonth = parseInt(days[j].getAttribute("data-month"), 10);
       const clickedYear = parseInt(days[j].getAttribute("data-year"), 10);
-      const selectedDate = new Date(clickedYear, clickedMonth - 1, clickedDay);
+      const selectedDate = new Date(clickedYear, clickedMonth - 1, clickedDay+1);
 
-      // Tarihi "YYYY-MM-DD" formatına dönüştür
+    
       const formattedDate = selectedDate.toISOString().split("T")[0];
 
-      // Tarihi milisaniye cinsinden elde et
-      const dataTimes = selectedDate.getTime();
 
       // localStorage'a tarihi yazdır
       localStorage.setItem("selectedDate", formattedDate);
+
+      const myDay= localStorage.getItem("selectedDate")
+      const myTime= localStorage.getItem("time")
+      console.log(myDay, myTime);
+    //   const isAnySelected = Array.from(selectList).some((option) =>
+    //   option.childNodes[0].childNodes[1].childNodes[0].textContent === myService
+    //     ? (option.style.border = "2px solid #53D56C")
+    //     : ""
+    // );
 
       if (selectedDays.includes(j)) {
         const index = selectedDays.indexOf(j);

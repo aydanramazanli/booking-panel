@@ -14,7 +14,6 @@ const staff = [
   },
 ];
 
-
 staff.forEach((staffItem) => {
   const staffs = document.getElementById("stafflist");
   // create staffList
@@ -50,32 +49,30 @@ staff.forEach((staffItem) => {
       selectList.forEach((option) => {
         option.style.border = "none";
       });
-      selected.style.border = "2px solid green";
+      selected.style.border = "2px solid #53D56C";
       modal.style.display = "none";
-      window.location.pathname="../service.html"
-    
+      window.location.pathname = "../service.html";
     });
   });
 
-  const isAnySelected = Array.from(selectList).some(
-    (option) => option.style.border === "2px solid green");
+  const myStaff = localStorage.getItem("staff");
+ 
+    const isAnySelected = Array.from(selectList).some(
+      (option) =>option.childNodes[1].firstChild.textContent === myStaff? option.style.border="2px solid #53D56C": ''
+    );
+ 
+ 
+
   nextBtn.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!isAnySelected) {
       modal.style.display = "flex";
     }
-   
   });
 
-
-
-
-  
   // added localstorage
   staffList.addEventListener("click", function () {
     localStorage.setItem("staff_id", staffItem.id);
     localStorage.setItem("staff", staffItem.name);
   });
-
-  // condition
 });
